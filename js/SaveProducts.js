@@ -1,6 +1,7 @@
 //Importing Data from Server Scripts
 //import { productServer } from './server/server.js';
 import { createAlert } from './createAlerts.js';
+import { createProduct, request, deleteProduct, updateProduct, dollarUS2} from "../controllers/products.js";
 /*productServer.productbyCategory()
 .then((response) => {
     response.forEach(data => {
@@ -10,21 +11,17 @@ import { createAlert } from './createAlerts.js';
 })
 .catch((error) => {});
 */
-let dollarUS2 = Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    useGrouping: true,
-});
+
 
 //create products and add by click
 export class product {
-    constructor (name, price, category, url){
+    constructor (name, price, category, url, description){
         this.name = name;
         this.price = dollarUS2.format(price);
         this.id = uuid.v4().substr(0,8);
         this.url = url;
         this.category = category;
-        this.description = "Lorem ipsum dolor sit amet. Id galisum fugiat ut minus rerum non sequi neque 33 minima facere voluptatibus doloremque est minima sequi ut doloremque praesentium."
+        this.description = description;
     };
     createProduct (){
         const product = document.createElement ("div");
@@ -107,12 +104,15 @@ addBtn.addEventListener ("click", (event)=>{
         });
 
     }else{
-    const newproduct = new product (name.value, price.value, categoria.value, url.value);
+    const newproduct = new product (name.value, price.value, categoria.value, url.value, description.value);
     //const theproduct = newproduct.createProduct();
-    const productComponents = newproduct;
-    /*newproduct.addProduct(theproduct);*/
+        const productComponents = newproduct;
+        console.log(productComponents);
 
-   newproduct.saveItems(productComponents.category, productComponents);
+    createProduct (name.value, price.value, categoria.value, url.value, description.value);
+    /*newproduct.addProduct(theproduct);*/
+   //newproduct.saveItems(productComponents.category, productComponents);
+
     const form = document.querySelector("[data-formularioProduct]");
     form.reset();
     

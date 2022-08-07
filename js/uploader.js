@@ -38,12 +38,10 @@ export function createUpload(title, message, boton1){
  uploaderIcon.addEventListener("click",()=> {
     uploadFiles();
     const file = document.querySelector(".uploadChooser");
-
     file.onchange = ({target}) =>{
        let thefile = target.files[0];
        if(thefile){
         let fileName  = thefile.name;
-   
         let theAlert = document.querySelector(".upload__alert");
         let theImage = document.createElement('div');
         theImage.classList.add("theuploaded__file")
@@ -60,9 +58,6 @@ export function createUpload(title, message, boton1){
        }
     }
 
-
-
-
     let closer = document.querySelector (".closeIcon");
     closer.addEventListener ("click",closeUploader);
 });
@@ -73,10 +68,3 @@ let closeUploader =  ()=>{
     window.onscroll = function() {
     };
 };
-
-
-
-
-
-
-

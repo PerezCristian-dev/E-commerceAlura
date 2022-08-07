@@ -15,8 +15,14 @@
     <link rel="stylesheet" href="assets/css/addproduct/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/uploader.css">
+    <link rel="stylesheet" href="assets/css/search_bar.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
 </head>
 <body>
+    <div class="loading">
+        <img src="assets/img/Vector.svg" alt="AluraGeek_logo" class="spin__logo">
+        <div class="spin"></div>
+    </div>
     <header class="theHead">
         <div class="theLogo">
             <div class="logo__section">
@@ -32,7 +38,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class = "content">
         <section class="addProduct__section">
             <form action="" class="formulario-addproducts flex flex--column" data-formularioProduct>
                 <fieldset>
@@ -101,7 +107,7 @@
             </form>
         </section>
     </main>
-    <footer class="thefooter">
+    <footer class="thefooter content">
         <p>Created by Christheadvenger &copy 2022</p>
         <div class="footer_icons">
             <a href="https://www.linkedin.com/in/cristian-perez-425ab2237/" target="_blank"class="social__links"><img src="assets/img/linkIn_icon.png" alt="" class="social_img">
@@ -114,5 +120,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="js/SaveProducts.js"></script>
     <script type="module" src="js/uploader.js"></script>
+    <script src="js/searchProductsDB.js" type="module"></script>
 </body>
 </html>

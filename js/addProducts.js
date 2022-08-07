@@ -1,10 +1,13 @@
-//create products and add by click
+import { createProduct, request, deleteProduct, updateProduct, dollarUS2} from "../controllers/products.js";
+
+//create products from db
+const products = await request.then(resp =>resp).catch(error=>error);
 
 class product {
-    constructor (name, price, category, url){
+    constructor (name, price, category, url, id){
         this.name = name;
-        this.price = price;
-        this.id = uuid.v4().substr(0,8);
+        this.price = dollarUS2.format(price);
+        this.id = id;
         this.url = url;
         this.category = category;
         this.description = "Lorem ipsum dolor sit amet. Id galisum fugiat ut minus rerum non sequi neque 33 minima facere voluptatibus doloremque est minima sequi ut doloremque praesentium."
@@ -35,20 +38,20 @@ class product {
     };
 };
 
-//Loading Products on productscreen load.
+//Loading Products on productscreen load localstorage.
 
-    const keys = Object.keys(sessionStorage);
-    const currentProducts = document.querySelectorAll(".product");
-    const existingProduct = [];
+    //const keys = Object.keys(sessionStorage);
+    //const currentProducts = document.querySelectorAll(".product");
+    //const existingProduct = [];
  
-    currentProducts.forEach(currentProduct =>{
+   /* currentProducts.forEach(currentProduct =>{
         const producto = currentProduct.childNodes[3].innerHTML;
         existingProduct.push (producto);
-    });
+    });*/
   
     
 //Getting the key of each saved password. 
-    keys.forEach (key =>{
+ /*  keys.forEach (key =>{
         if (key == "IsThisFirstTime_Log_From_LiveServer" || key == "login"){
 
         }else{
@@ -74,7 +77,21 @@ class product {
                 };
             });
         };
-    });
+    });*/
+
+
+
+    const create = (nombre, precio, categoria, imagen, id)=>{
+        const newproduct = new product (nombre, precio, categoria, imagen, id);
+        const theproduct = newproduct.createProduct();
+        newproduct.addProduct(theproduct);
+    }
+    products.forEach(product=>{
+        const {nombre, precio, categoria, imagen, id}=product
+        create(nombre, precio, categoria, imagen, id);
+    })
+
+
 
 
 //Adding functionality to edit and delete buttons
@@ -96,7 +113,9 @@ editBtn.forEach(btn =>{
 function deleteProduc (event){
     const product = event.target;
     const productTarget = product.parentNode.parentNode;
+    const id = productTarget.children[3].innerHTML;
     const productCategoryTarget = product.parentNode.parentNode.parentNode;
+    deleteProduct(id);
     productCategoryTarget.removeChild(productTarget);
 };
 
@@ -119,11 +138,14 @@ function editProduc (event){
     formUrlInput.value = editImg.src;
     formNameInput.value= editName.innerHTML;
     formPricecInput.value = editPrice.innerHTML;
+    let id = theProductEdit.children[4].innerHTML;
 
     savedButton.addEventListener("click", ()=>{
         editName.innerHTML = formNameInput.value;
         editPrice.innerHTML= formPricecInput.value;
         editImg.src = formUrlInput.value;
+        
+        updateProduct(id, editName.innerHTML, editPrice.innerHTML,  editImg.src);
         theProductEdit.removeChild(form);
     });
 

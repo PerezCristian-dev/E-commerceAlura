@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraGeek | E-Commerce</title>
+    
     <link rel="icon" href="assets/img/Vector.svg" type="image/icon type">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -15,8 +16,13 @@
     <link rel="stylesheet" href="assets/css/products.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/search_bar.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
 </head>
 <body>
+    <div class="loading">
+        <img src="assets/img/Vector.svg" alt="AluraGeek_logo" class="spin__logo">
+        <div class="spin"></div>
+    </div>
     <header class="theHead">
         <div class="theLogo">
             <div class="logo__section">
@@ -26,165 +32,23 @@
                     <img src="assets/img/AluraGeek.svg" alt="AluraGeek_logo" class="header__logo">
                 </a>
             </div>
-            <div class="header__btns">
+            <div class="header__btns ">
                 <input type="text" class="search__bar" placeholder="¿Qué deseas buscar?">
                 <a href="login.html" class="login__btn">Login</a>
             </div>
         </div>
     </header>
-    <main>
+    <main class = "content">
         <section class="banner">
             <div  class="banner__img">
                 <div class="banner__container">
                     <h2 class="banner__title">Febrero Promocional</h2>
                     <p class="banner__description">Productos selecionados con 33% de descuento</p>
-                    <a class ="banner__btn" href="#consoles">Ver Consolas</a>
+                    <a class ="banner__btn" href="#Consolas">Ver Consolas</a>
                 </div>
             </div>
         </section>
         <section class="product__section">
-            <div class="product__container">
-                <div class="section__header">
-                    <h2 class="product__title" data-category>Star Wars</h2>
-                    <div class="seeAll">
-                        <a class="product__seeAll">Ver todo</a>
-                        <img src="assets/img/seeAll_Arrow.svg" alt="">
-                    </div>
-                </div>
-                <div class="product__cards">
-                    <div class="product">
-                        <img src="assets/img/prod1.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Star Wars Coffe Cup</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod2.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Piza Papeles SW</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod3.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Let the Force B == You</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod4.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Star Wars Assassin</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod5.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Green Head</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod6.png" alt="product image" class="product__img">
-                        <h2 class="product__name">He is your Father</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product__container">
-                <div class="section__header">
-                    <h2 class="product__title" id="consoles" data-category>Consolas</h2>
-                    <div class="seeAll">
-                        <a class="product__seeAll">Ver todo</a>
-                        <img src="assets/img/seeAll_Arrow.svg" alt="">
-                    </div>
-                </div>
-                <div class="product__cards">
-                    <div class="product">
-                        <img src="assets/img/prod7.png" alt="product image" class="product__img">
-                        <h2 class="product__name">XBOX Controller</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod8.png" alt="product image" class="product__img">
-                        <h2 class="product__name">PS5 Case</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod9.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Nintento el Primero</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod10.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Nintendo Switch Joycon</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod17.png" alt="product image" class="product__img">
-                        <h2 class="product__name">XBOX Series X</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod11.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Gameboy Color</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                </div>
-            </div>
-            <div class="product__container">
-                <div class="section__header">
-                    <h2 class="product__title" data-category>Diversos</h2>
-                    <div class="seeAll">
-                        <a class="product__seeAll">Ver todo</a>
-                        <img src="assets/img/seeAll_Arrow.svg" alt="">
-                    </div>
-                </div>
-                <div class="product__cards">
-                    <div class="product">
-                        <img src="assets/img/prod12.png" alt="product image" class="product__img">
-                        <h2 class="product__name">T-shirt</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod13.png" alt="product image" class="product__img">
-                        <h2 class="product__name">A Gamer</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod14.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Sonic Doll</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod18.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Alarm Clock</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod15.png" alt="product image" class="product__img">
-                        <h2 class="product__name">PS VR</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod16.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Pica Pica</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__link">Ver producto </a>
-                    </div>
-                </div>
-            </div>
         </section>
         <section class="footer__form__section">
             <div class="footer__container__form">
@@ -220,7 +84,7 @@
             </form>
         </section>
     </main>
-    <footer class="thefooter">
+    <footer class="thefooter content">
         <p>Created by Christheadvenger &copy 2022</p>
         <div class="footer_icons">
             <a href="https://www.linkedin.com/in/cristian-perez-425ab2237/" target="_blank"class="social__links"><img src="assets/img/linkIn_icon.png" alt="" class="social_img">
@@ -231,8 +95,12 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/script.js" type="module"></script>
-    <script src="./js/searchProducts.js"></script>
+
+    <!--<script src="./controllers/products.js"></script>
+       <script src="./js/script.js" type="module"></script>
     <script src="./js/productdetails.js"></script>
+    <script src="./controllers/products.js"></script>-->
+    <script src="./js/searchProductsDB.js" type="module"></script>
+    <script src="./js/server/services.js" type="module"></script>   
 </body>
 </html>

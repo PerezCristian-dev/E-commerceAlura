@@ -1,0 +1,60 @@
+.loading{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #16191e ;
+    opacity: .8;
+    position: absolute;
+    z-index: 999;
+
+}
+
+.spin__logo{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    animation: spinStop 2s infinite linear;
+}
+
+.spin{
+  
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b;
+    border-top-color: #2A7AE4;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spinning 1s infinite linear;
+}
+
+.content{
+    display: none;
+}
+
+
+@keyframes spinning{
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinStop{
+
+    100%{
+        transform: scale(1.2) ;
+       
+    }50%{
+        transform: rotate(360deg); 
+    }
+}

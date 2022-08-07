@@ -14,8 +14,13 @@
     <link rel="stylesheet" href="assets/css/seeproducts/seeproducts.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/search_bar.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
 </head>
 <body>
+    <div class="loading">
+        <img src="assets/img/Vector.svg" alt="AluraGeek_logo" class="spin__logo">
+        <div class="spin"></div>
+    </div>
     <header class="theHead">
         <div class="theLogo">
             <div class="logo__section">
@@ -31,56 +36,13 @@
         </div>
     </header>
 
-    <main>
+    <main class = "content">
         <section class="product__section">
             <div class="product__container">
-                <div class="product__information__details">
-                    <img src="assets/img/prod1.png" alt="product image" class="product__img__details__see">
-                    <div class="product__img__details">
-                        <h2 class="product__name__see">Star Wars Coffe Cup</h2>
-                        <p class="product__price__see">$ 60.00</p>
-                        <p href="#" class="product__details__see">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga voluptate facilis laborum possimus reiciendis excepturi ullam, illo est et molestiae ab tempora labore quis recusandae cum nostrum ratione distinctio eum.</p>
-                    </div>
-                </div>
                 <div class="section__header">
                     <h2 class="product__title">Productos similares</h2>
                 </div>
-                <div class="product__cards" data-productsContainer>
-                    
-                    <div class="product">
-                        <img src="assets/img/prod1.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Star Wars Coffe Cup</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__id">Ver producto</a>
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod2.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Pizaa Papeles SW</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__id">Ver producto</a>
-
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod3.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Force B with you</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__id">Ver producto</a>
-
-                    </div>
-                    <div class="product">
-                        <img src="assets/img/prod4.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Star Wars Assassin</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__id">Ver producto</a>
-
-                    </div>
-                    <div class="product last">
-                        <img src="assets/img/prod5.png" alt="product image" class="product__img">
-                        <h2 class="product__name">Green Head</h2>
-                        <p class="product__price">$ 60.00</p>
-                        <a href="#" class="product__id">Ver producto</a>
-
-                    </div>
+                <div class="product__cards" data-productsContainer>                   
                 </div>
             </div>
         </section>
@@ -118,7 +80,7 @@
             </form>
         </section>
     </main>
-    <footer class="thefooter">
+    <footer class="thefooter content">
         <p>Created by Christheadvenger &copy 2022</p>
         <div class="footer_icons">
             <a href="https://www.linkedin.com/in/cristian-perez-425ab2237/" target="_blank"class="social__links"><img src="assets/img/linkIn_icon.png" alt="" class="social_img">
@@ -129,7 +91,8 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/searchProducts.js"></script>
+    <script src="js/searchProductsDB.js" type="module"></script>
     <script src="./js/seeproducts.js" type="module"></script>
+    <script src="./js/seeallproducts.js" type="moduel"></script>
 </body>
 </html>
